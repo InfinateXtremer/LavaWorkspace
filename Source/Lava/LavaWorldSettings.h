@@ -14,4 +14,6 @@ class LAVA_API ALavaWorldSettings : public AWorldSettings
 {
 	GENERATED_BODY()
 	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		bool bPlayCreditsAfterOutroCinematic;
 };
