@@ -14,7 +14,7 @@ class LAVA_API ALavaPlayerStart : public APlayerStart
 {
 	GENERATED_BODY()
 
-public: 
+public:
 	ALavaPlayerStart(const FObjectInitializer& ObjectInitializer);
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
