@@ -8,58 +8,33 @@
 #include "Engine/Texture2D.h"
 #include "Components/BillboardComponent.h"
 
+//https://cpp.hotexamples.com/site/file?hash=0x2f245c85355fdf1d8bd94c584ab266c6f53e131c718beee6aecbe50444382d9e&fullName=ValorGame-master/Source/ValorGame/Private/Components/ValorMinionSpawner.cpp&project=Shirasho/ValorGame
 ALavaPlayerStart::ALavaPlayerStart(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
 	bDefaultStart = true;
-	
-	GetCapsuleComponent()->SetCapsuleRadius(12.0f);
-	GetCapsuleComponent()->SetCapsuleHalfHeight(24.0f);
 
-if (!IsRunningCommandlet())
-{
-	// Structure to hold one-time initialization
-	struct FConstructorStatics
-	{
-		ConstructorHelpers::FObjectFinderOptional<UTexture2D> PlayerStartTextureObject;
-		FName ID_PlayerStart;
-		FText NAME_PlayerStart;
-		FName ID_Navigation;
-		FText NAME_Navigation;
-		FConstructorStatics()
-			: PlayerStartTextureObject(TEXT("/Game/Editor/S_Crash"))
-			, ID_PlayerStart(TEXT("LavaStart"))
-			, NAME_PlayerStart(NSLOCTEXT("SpriteCategory", "PlayerStart", "Player Start"))
-			, ID_Navigation(TEXT("Navigation"))
-			, NAME_Navigation(NSLOCTEXT("SpriteCategory", "Navigation", "Navigation"))
-		{
-		}
-	};
-	static FConstructorStatics ConstructorStatics;
+	GetCapsuleComponent()->InitCapsuleSize(12.0f, 24.0f);
 
-	if (GetGoodSprite())
+
+	static ConstructorHelpers::FObjectFinder<UTexture2D> PlayerStartTextureObject(TEXT("/UserInterfaceArtProduction/Textures/Portraits/UI_Portrait_Crash_Default"));
+	static ConstructorHelpers::FObjectFinder<UTexture2D> EnginePlayerStartTextureObject(TEXT("/Engine/EditorResources/S_Player"));
+
+	if (PlayerStartTextureObject.Object != nullptr)
 	{
-		GetGoodSprite()->Sprite = ConstructorStatics.PlayerStartTextureObject.Get();
-		GetGoodSprite()->SetRelativeScale3D(FVector(0.5f, 0.5f, 0.5f));
-		GetGoodSprite()->SpriteInfo.Category = ConstructorStatics.ID_PlayerStart;
-		GetGoodSprite()->SpriteInfo.DisplayName = ConstructorStatics.NAME_PlayerStart;
+		GetGoodSprite()->Sprite = PlayerStartTextureObject.Object;
 	}
-	if (GetBadSprite())
+	else
 	{
-		GetBadSprite()->SetVisibility(false);
+		GetGoodSprite()->Sprite = EnginePlayerStartTextureObject.Object;
 	}
-
 	if (GetArrowComponent())
 	{
 		GetArrowComponent()->ArrowColor = FColor(255, 190, 50);
 		GetArrowComponent()->SetRelativeLocation(FVector(1.0f, 0.0f, 0.0f));
-
 		GetArrowComponent()->ArrowSize = 1.0f;
 		GetArrowComponent()->bTreatAsASprite = true;
-		GetArrowComponent()->SpriteInfo.Category = ConstructorStatics.ID_Navigation;
-		GetArrowComponent()->SpriteInfo.DisplayName = ConstructorStatics.NAME_Navigation;
 		GetArrowComponent()->SetupAttachment(GetCapsuleComponent());
 		GetArrowComponent()->bIsScreenSizeScaled = true;
 	}
-}
 }
