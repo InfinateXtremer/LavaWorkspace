@@ -72,3 +72,34 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+Plugins/CP3701_Crash/Content/Textures/T_CP3701_Eye_R.uasset
+Plugins/CP3701_Crash/Content/Textures/T_CP3701_Eye_N.uasset
+Plugins/CP3701_Crash/Content/Textures/T_CP3701_Eye_C.uasset
+Plugins/CP3701_Crash/Content/Textures/T_CP3701_Crash_T.uasset
+Plugins/CP3701_Crash/Content/Textures/T_CP3701_Crash_R.uasset
+Plugins/CP3701_Crash/Content/Textures/T_CP3701_Crash_N.uasset
+Plugins/CP3701_Crash/Content/Textures/T_CP3701_Crash_M.uasset
+Plugins/CP3701_Crash/Content/Textures/T_CP3701_Crash_FW.uasset
+Plugins/CP3701_Crash/Content/Textures/T_CP3701_Crash_FC.uasset
+Plugins/CP3701_Crash/Content/Textures/T_CP3701_Crash_C.uasset
+Plugins/CP3701_Crash/Content/Mesh/Crash_Model_PhysicsAsset.uasset
+Plugins/CP3701_Crash/Content/Mesh/Crash_Model.uasset
+Plugins/CP3701_Crash/Content/Materials/MI_CP3701_Crash_Fur.uasset
+Plugins/CP3701_Crash/Content/Materials/MI_CP3701_Crash_Eyes.uasset
+Plugins/CP3701_Crash/Content/Materials/MI_CP3701_Crash.uasset
+Plugins/CP3701_Crash/Content/Animations/A_CP3701_Idle.uasset
+Plugins/CP3701_Crash/Content/Animations/A_CP3701_Timeout_CrashDance.uasset
+Plugins/CP3701_Crash/Content/Animations/AM_CP3701_Celebrate_Bravo.uasset
+Plugins/CP3701_Crash/Content/Animations/AM_CP3701_Celebrate_Breakdance.uasset
+Plugins/CP3701_Crash/Content/Animations/AM_CP3701_Celebrate_Jump.uasset
+Plugins/CP3701_Crash/Content/Animations/AM_CP3701_Celebrate_Poses.uasset
+Plugins/CP3701_Crash/Content/Animations/AM_CP3701_Celebrate_Test.uasset
+Plugins/CP3701_Crash/Content/Data/CP3701_RunStep.uasset
+Plugins/CP3704_Coco/Content/Animations/A_CP3704_Buddy_Path_Dance.uasset
+Plugins/CP3704_Coco/Content/Animations/AM_CP3704_Celebrate_Bow.uasset
+Plugins/CP3704_Coco/Content/Animations/AM_CP3704_Celebrate_FistDown.uasset
+Plugins/CP3704_Coco/Content/Animations/AM_CP3704_Celebrate_Spin.uasset
+Plugins/CP3704_Coco/Content/Animations/AM_CP3704_Timeout_Dance.uasset
+Plugins/CP3704_Coco/Content/Mesh/Coco_Model.uasset
+Plugins/CP3704_Coco/Content/Mesh/Coco_Model_PhysicsAsset.uasset
+Plugins/CP3704_Coco/Content/Mesh/MI_CP3704_Coco.uasset
