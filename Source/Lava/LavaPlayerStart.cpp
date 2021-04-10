@@ -28,13 +28,4 @@ ALavaPlayerStart::ALavaPlayerStart(const FObjectInitializer& ObjectInitializer)
 	{
 		GetGoodSprite()->Sprite = EnginePlayerStartTextureObject.Object;
 	}
-	if (GetArrowComponent())
-	{
-		GetArrowComponent()->ArrowColor = FColor(255, 190, 50);
-		GetArrowComponent()->SetRelativeLocation(FVector(1.0f, 0.0f, 0.0f));
-		GetArrowComponent()->ArrowSize = 1.0f;
-		GetArrowComponent()->bTreatAsASprite = true;
-		GetArrowComponent()->SetupAttachment(GetCapsuleComponent());
-		GetArrowComponent()->bIsScreenSizeScaled = true;
-	}
 }
