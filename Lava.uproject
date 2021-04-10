@@ -12,14 +12,6 @@
         "Engine"
       ]
     },
-    {
-      "Name": "TfbCombat",
-      "Type": "Runtime",
-      "LoadingPhase": "Default",
-      "AdditionalDependencies": [
-        "Engine"
-      ]
-    }
   ],
 	"Plugins": [
 		{
