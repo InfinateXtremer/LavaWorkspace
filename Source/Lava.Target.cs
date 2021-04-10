@@ -10,6 +10,6 @@ public class LavaTarget : TargetRules
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
 
-		ExtraModuleNames.AddRange( new string[] { "Lava", "TfbCombat" } );
+		ExtraModuleNames.AddRange( new string[] { "Lava"  } );
     }
 }
